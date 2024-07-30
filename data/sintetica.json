@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "nombre": "Canchas  El Che",
+        "direccion": "Ciudad Alegria",
+        "telefono": "0953364410",
+        "latitud": "51.491772",
+        "longitud": "-0.065489",
+        "horario": "13:00  HORAS - 23 :00 HORAS"
+    },
+    {
+        "id": 2,
+        "nombre": "Deportes Arena",
+        "direccion": "\"Avenida Libertad\"",
+        "telefono": "0959900112",
+        "latitud": "51.508121",
+        "longitud": "-0.075359",
+        "horario": "\"12:00 HORAS - 22:00 HORAS\""
+    },
+    {
+        "id": 3,
+        "nombre": "\u00c1rea Deportiva Delta",
+        "direccion": "Plaza de la Ciudad",
+        "telefono": "0960011223",
+        "latitud": "51.510258",
+        "longitud": "-0.078449",
+        "horario": "10:00 HORAS - 20:00 HORAS"
+    },
+    {
+        "id": 4,
+        "nombre": "Campo Deportivo Alfa",
+        "direccion": "\"Plaza del Sol",
+        "telefono": "0955566778",
+        "latitud": "51.111713",
+        "longitud": "-0.318604",
+        "horario": "13:00  HORAS - 23 :00 HORAS"
+    },
+    {
+        "id": 5,
+        "nombre": "Centro de Deportes Omega",
+        "direccion": "Avenida Central",
+        "telefono": "0957788990",
+        "latitud": "17.316554",
+        "longitud": "9.711914",
+        "horario": "13:00  HORAS - 23 :00 HORAS"
+    },
+    {
+        "id": 6,
+        "nombre": "Calva y Calva",
+        "direccion": "Los operadores",
+        "telefono": "0953364410",
+        "latitud": "51.514745",
+        "longitud": "-0.069523",
+        "horario": "13:00  HORAS - 23 :00 HORAS"
+    },
+    {
+        "id": 7,
+        "nombre": "La sede",
+        "direccion": "Ciudad Alegria",
+        "telefono": "0980789050",
+        "latitud": "51.516454",
+        "longitud": "-0.059395",
+        "horario": "13:00  HORAS - 21 :00 HORAS"
+    },
+    {
+        "id": 8,
+        "nombre": "Canchas Pucara",
+        "direccion": "Parque Infantil",
+        "telefono": "0981729443",
+        "latitud": "51.483113",
+        "longitud": "-0.055447",
+        "horario": "13:00  HORAS - 21 :00 HORAS"
+    },
+    {
+        "id": 9,
+        "nombre": "Canchas Champions",
+        "direccion": "Miraflores",
+        "telefono": "0997288985",
+        "latitud": "51.529271",
+        "longitud": "-0.123253",
+        "horario": "13:00  HORAS - 21 :00 HORAS"
+    },
+    {
+        "id": 10,
+        "nombre": "Canchas El pinto",
+        "direccion": "Los operadores",
+        "telefono": "0969614854",
+        "latitud": "51.486962",
+        "longitud": "-0.078707",
+        "horario": "12:00  HORAS - 17 :00 HORAS"
+    },
+    {
+        "id": 11,
+        "nombre": "Cancha San Jacinto",
+        "direccion": "Vicentino",
+        "telefono": "0989700718",
+        "latitud": "51.497964",
+        "longitud": "0.074841",
+        "horario": "13:00  HORAS - 00 :00 HORAS"
+    },
+    {
+        "id": 12,
+        "nombre": "Canchas el Chileno",
+        "direccion": "Ograpia",
+        "telefono": "0953364410",
+        "latitud": "51.513430",
+        "longitud": "-0.034459",
+        "horario": "13:00  HORAS - 00 :00 HORAS"
+    }
+]

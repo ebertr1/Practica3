@@ -1,0 +1,89 @@
+import time
+import random
+from sys import maxsize
+
+class Dijkstra:
+    def __init__(self, adjacency_matrix, start_vertex):
+        self.size = len(adjacency_matrix)
+        self.start = start_vertex - 1  # Convertir a índice base 0
+        self.matrix = adjacency_matrix
+        self.distances = [maxsize] * self.size
+        self.previous = [-1] * self.size
+        self.visited = [False] * self.size
+
+    def calculate_shortest_paths(self):
+        """Calcula las distancias más cortas desde el vértice de inicio"""
+        self.distances[self.start] = 0
+
+        for _ in range(self.size):
+            current = self._select_next_vertex()
+            self.visited[current] = True
+            for neighbor in range(self.size):
+                if not self.visited[neighbor]:
+                    new_distance = self.distances[current] + self.matrix[current][neighbor]
+                    if new_distance < self.distances[neighbor]:
+                        self.distances[neighbor] = new_distance
+                        self.previous[neighbor] = current
+
+    def _select_next_vertex(self):
+        """Selecciona el vértice no visitado con la distancia más corta"""
+        min_distance = maxsize
+        min_index = -1
+        for vertex in range(self.size):
+            if not self.visited[vertex] and self.distances[vertex] < min_distance:
+                min_distance = self.distances[vertex]
+                min_index = vertex
+        return min_index
+
+    def get_path(self, end_vertex):
+        """Recupera el camino más corto desde el vértice de inicio hasta el vértice de destino"""
+        path = []
+        current = end_vertex - 1
+        while current != -1:
+            path.insert(0, current + 1)
+            current = self.previous[current]
+        return path
+
+    def get_distance(self, end_vertex):
+        """Recupera la distancia más corta hasta el vértice de destino"""
+        return self.distances[end_vertex - 1]
+
+def generate_graph(num_vertices, max_edge_weight=1000):
+    """Genera un grafo aleatorio con un número específico de vértices"""
+    graph = [[maxsize if i != j else 0 for j in range(num_vertices)] for i in range(num_vertices)]
+    for i in range(num_vertices):
+        for j in range(i + 1, num_vertices):
+            weight = random.randint(1, max_edge_weight)
+            graph[i][j] = weight
+            graph[j][i] = weight
+    return graph
+
+def measure_dijkstra_time(num_vertices):
+    """Mide el tiempo que tarda el algoritmo de Dijkstra en un grafo con num_vertices"""
+    graph = generate_graph(num_vertices)
+    spf = Dijkstra(graph, 1)
+    
+    start_time = time.time()
+    spf.calculate_shortest_paths()
+    end_time = time.time()
+    
+    return end_time - start_time
+
+def main():
+    data_sizes = [5, 10, 15]
+    results = []
+
+    for size in data_sizes:
+        dijkstra_time = measure_dijkstra_time(size)
+        results.append({
+            "Número de Datos": size,
+            "Tiempo Dijkstra (s)": dijkstra_time
+        })
+
+    print("Resultados de los tiempos de ejecución:")
+    print(f"{'Número de Datos':<20} {'Tiempo Dijkstra (s)'}")
+    for result in results:
+        print(f"{result['Número de Datos']:<20} {result['Tiempo Dijkstra (s)']:.4f}")
+
+if __name__ == "__main__":
+    main()
